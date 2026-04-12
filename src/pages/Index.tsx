@@ -14,14 +14,16 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "AI-TECH HAVEN INTERNATIONAL (A-THI)",
-  description: "Professional account recovery and IT services across Nigeria. Instagram, Facebook & Email account recovery expert serving Lagos, Abuja, Port Harcourt, and worldwide.",
+  description: "Professional account recovery and IT services across Nigeria. Instagram, Facebook, Gmail, WhatsApp & Email account recovery expert serving Lagos, Abuja, Port Harcourt, and worldwide.",
   url: "https://a-thi.com",
   telephone: "+2348088851368",
+  email: "support@a-thi.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "No. 2 Emenike Street",
+    streetAddress: "2c Emenike Street, Mile One, Diobu",
     addressLocality: "Port Harcourt",
     addressRegion: "Rivers State",
+    postalCode: "500211",
     addressCountry: "NG",
   },
   geo: {
@@ -34,13 +36,20 @@ const localBusinessSchema = {
     { "@type": "City", name: "Lagos" },
     { "@type": "City", name: "Abuja" },
     { "@type": "City", name: "Port Harcourt" },
+    { "@type": "Country", name: "Worldwide" },
   ],
   openingHours: "Mo-Sa 08:00-20:00",
   priceRange: "$$",
-  sameAs: [],
+  image: "https://a-thi.com/favicon.png",
+  sameAs: [
+    "https://www.facebook.com/Athionline",
+    "https://www.instagram.com/a_thi.site",
+    "https://twitter.com/A_THIonline",
+    "https://www.tiktok.com/@ai_techhaven",
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "IT Services",
+    name: "Account Recovery & IT Services",
     itemListElement: [
       {
         "@type": "Offer",
@@ -58,6 +67,22 @@ const localBusinessSchema = {
           description: "Expert Facebook account recovery for suspended, disabled, and hacked accounts in Lagos, Abuja, and all of Nigeria.",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Gmail & Email Account Recovery Nigeria",
+          description: "Professional Gmail and email account recovery for locked, hacked, and inaccessible accounts across Nigeria.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "WhatsApp Account Recovery Nigeria",
+          description: "Fast WhatsApp account recovery for banned, hacked, and inaccessible accounts across Nigeria and worldwide.",
+        },
+      },
     ],
   },
 };
@@ -65,9 +90,10 @@ const localBusinessSchema = {
 const Index = () => (
   <>
     <SEOHead
-      title="A-THI | #1 Account Recovery Expert in Nigeria — Instagram, Facebook & Email Recovery"
-      description="Professional Instagram account recovery Nigeria, Facebook account recovery Lagos & Abuja. A-THI is Nigeria's trusted account recovery expert serving Lagos, Abuja, Port Harcourt & worldwide. Fast remote recovery. CAC: 9255386."
+      title="Account Recovery Expert Nigeria | Instagram, Facebook, Gmail, WhatsApp Recovery | AI-TECH HAVEN INTERNATIONAL"
+      description="Professional account recovery services for Instagram, Facebook, Gmail, WhatsApp, TikTok and all social media. Fast recovery for disabled, hacked and suspended accounts in Port Harcourt, Lagos, Abuja and worldwide. Safe & reliable."
       canonical="https://a-thi.com/"
+      keywords="account recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp account recovery, TikTok recovery Nigeria, Instagram recovery Abuja, Facebook recovery Port Harcourt, social media recovery Nigeria, hacked account recovery Nigeria, disabled Instagram account recovery, suspended Facebook account Nigeria, remote account recovery worldwide, IT specialist Port Harcourt"
       schema={localBusinessSchema}
     />
     <Header />

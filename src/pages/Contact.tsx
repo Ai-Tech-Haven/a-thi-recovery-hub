@@ -12,8 +12,9 @@ const Contact = () => (
   <>
     <SEOHead
       title="Contact A-THI | Account Recovery Expert Nigeria — Port Harcourt Office | Remote Support Nationwide"
-      description="Contact A-THI for Instagram & Facebook account recovery across Nigeria. Port Harcourt office with remote support for Lagos, Abuja & worldwide. WhatsApp: 08088851368. CAC: 9255386."
+      description="Contact AI-TECH HAVEN INTERNATIONAL for Instagram, Facebook, Gmail & WhatsApp account recovery across Nigeria. Port Harcourt office with remote support for Lagos, Abuja & worldwide. Call/WhatsApp: +2348088851368. CAC: 9255386."
       canonical="https://a-thi.com/contact"
+      keywords="contact account recovery Nigeria, A-THI contact, Instagram recovery contact Nigeria, Facebook recovery Port Harcourt, WhatsApp account recovery contact, account recovery expert Nigeria phone number"
     />
     <Header />
     <main className="pt-20">
