@@ -12,7 +12,10 @@ const Footer = () => (
         <div>
           <div className="mb-4 flex items-center gap-3">
             <img src={logo} alt="A-THI Logo - Account Recovery Expert Nigeria" className="h-12 w-auto" />
-            <span className="font-heading text-sm font-semibold text-white">A-THI</span>
+            <div>
+              <p className="font-heading text-sm font-bold text-white">AI-TECH HAVEN INTERNATIONAL</p>
+              <p className="font-heading text-xs text-white/60">(A-THI)</p>
+            </div>
           </div>
           <p className="text-sm text-white/60">
             Professional Account & Data Recovery Expert and IT Specialist. Port Harcourt Office | Remote Support Across Nigeria & Worldwide. Trust us to restore what's yours.

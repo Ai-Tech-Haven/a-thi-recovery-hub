@@ -10,7 +10,7 @@ interface SEOHeadProps {
   keywords?: string;
 }
 
-const DEFAULT_IMAGE = "https://a-thi.com/favicon.png";
+const DEFAULT_IMAGE = "https://ai-techhaven.site/favicon.png";
 const DEFAULT_KEYWORDS = "account recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp recovery, social media recovery Nigeria, hacked account recovery, disabled account recovery, IT specialist Port Harcourt";
 
 const SEOHead = ({

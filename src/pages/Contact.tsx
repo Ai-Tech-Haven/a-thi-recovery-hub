@@ -13,7 +13,7 @@ const Contact = () => (
     <SEOHead
       title="Contact A-THI | Account Recovery Expert Nigeria — Port Harcourt Office | Remote Support Nationwide"
       description="Contact AI-TECH HAVEN INTERNATIONAL for Instagram, Facebook, Gmail & WhatsApp account recovery across Nigeria. Port Harcourt office with remote support for Lagos, Abuja & worldwide. Call/WhatsApp: +2348088851368. CAC: 9255386."
-      canonical="https://a-thi.com/contact"
+      canonical="https://ai-techhaven.site/contact"
       keywords="contact account recovery Nigeria, A-THI contact, Instagram recovery contact Nigeria, Facebook recovery Port Harcourt, WhatsApp account recovery contact, account recovery expert Nigeria phone number"
     />
     <Header />
@@ -59,7 +59,7 @@ const Contact = () => (
                     <Mail className="mt-1 h-5 w-5 shrink-0 text-primary" />
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-sm text-muted-foreground">support@a-thi.com</p>
+                      <a href="mailto:aitechhaveninternational@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">aitechhaveninternational@gmail.com</a>
                     </div>
                   </div>
                 </div>

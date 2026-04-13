@@ -11,7 +11,7 @@ const Blog = () => (
     <SEOHead
       title="A-THI Blog | Account Recovery Tips, IT Security & Digital Solutions Nigeria"
       description="Expert tips on Instagram account recovery, Facebook account recovery, IT security, and digital solutions for businesses across Nigeria. Stay informed with A-THI."
-      canonical="https://a-thi.com/blog"
+      canonical="https://ai-techhaven.site/blog"
     />
     <Header />
     <main className="min-h-screen pt-24 pb-16">

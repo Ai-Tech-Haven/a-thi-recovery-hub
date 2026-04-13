@@ -15,9 +15,9 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "AI-TECH HAVEN INTERNATIONAL (A-THI)",
   description: "Professional account recovery and IT services across Nigeria. Instagram, Facebook, Gmail, WhatsApp & Email account recovery expert serving Lagos, Abuja, Port Harcourt, and worldwide.",
-  url: "https://a-thi.com",
+  url: "https://ai-techhaven.site",
   telephone: "+2348088851368",
-  email: "support@a-thi.com",
+  email: "aitechhaveninternational@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "2c Emenike Street, Mile One, Diobu",
@@ -40,7 +40,7 @@ const localBusinessSchema = {
   ],
   openingHours: "Mo-Sa 08:00-20:00",
   priceRange: "$$",
-  image: "https://a-thi.com/favicon.png",
+  image: "https://ai-techhaven.site/favicon.png",
   sameAs: [
     "https://www.facebook.com/Athionline",
     "https://www.instagram.com/a_thi.site",
@@ -92,7 +92,7 @@ const Index = () => (
     <SEOHead
       title="Account Recovery Expert Nigeria | Instagram, Facebook, Gmail, WhatsApp Recovery | AI-TECH HAVEN INTERNATIONAL"
       description="Professional account recovery services for Instagram, Facebook, Gmail, WhatsApp, TikTok and all social media. Fast recovery for disabled, hacked and suspended accounts in Port Harcourt, Lagos, Abuja and worldwide. Safe & reliable."
-      canonical="https://a-thi.com/"
+      canonical="https://ai-techhaven.site/"
       keywords="account recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp account recovery, TikTok recovery Nigeria, Instagram recovery Abuja, Facebook recovery Port Harcourt, social media recovery Nigeria, hacked account recovery Nigeria, disabled Instagram account recovery, suspended Facebook account Nigeria, remote account recovery worldwide, IT specialist Port Harcourt"
       schema={localBusinessSchema}
     />

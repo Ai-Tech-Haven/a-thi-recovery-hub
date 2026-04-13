@@ -40,7 +40,7 @@ const BlogPost = () => {
       <SEOHead
         title={`${post.title} | A-THI Blog — Account Recovery Nigeria`}
         description={post.excerpt}
-        canonical={`https://a-thi.com/blog/${post.slug}`}
+        canonical={`https://ai-techhaven.site/blog/${post.slug}`}
         type="article"
         schema={articleSchema}
       />

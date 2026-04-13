@@ -70,7 +70,7 @@ const ServicePage = () => {
       <SEOHead
         title={seoTitle}
         description={seoDesc}
-        canonical={`https://a-thi.com/services/${service.slug}`}
+        canonical={`https://ai-techhaven.site/services/${service.slug}`}
         keywords={seoKeywords}
         schema={serviceSchema}
       />

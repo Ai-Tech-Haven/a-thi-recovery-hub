@@ -6,7 +6,7 @@ export const services = [
     name: "Accounts Recovery",
     subtitle: "Social Media & Email",
     headline: "Professional Instagram, Facebook & Email Account Recovery in Nigeria",
-    desc: "Expert recovery for disabled, suspended, or hacked Instagram, Facebook, TikTok, Twitter, and Email accounts across Lagos, Abuja, Port Harcourt & all of Nigeria.",
+    desc: "Expert recovery for disabled, suspended, or hacked Instagram, Facebook, TikTok, Twitter, Gmail, WhatsApp, and all social media accounts across Lagos, Abuja, Port Harcourt & all of Nigeria.",
     content: "We specialize in recovering disabled, hacked, suspended, and deleted accounts. Expert in wrong ID submissions, device flags, and repeated suspensions. Fast appeal process with high success rate. 50% deposit, balance after recovery. Remote Instagram recovery Nigeria and Facebook account recovery available for clients in Lagos, Abuja, and Nigerians abroad.",
     benefits: [
       "Recover disabled, hacked, suspended & deleted accounts",
@@ -135,8 +135,8 @@ export const services = [
       "Affordable support packages",
     ],
     icon: Headphones,
-    color: "from-cyan-500 to-cyan-700",
-    glow: "hover:shadow-cyan-500/20",
+    color: "from-violet-500 to-indigo-600",
+    glow: "hover:shadow-violet-500/20",
   },
   {
     slug: "networking",
