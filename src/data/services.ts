@@ -1,4 +1,4 @@
-import { Shield, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck } from "lucide-react";
+import { Shield, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck, Lock, BarChart2 } from "lucide-react";
 
 export const services = [
   {
@@ -194,5 +194,47 @@ export const services = [
     icon: UserCheck,
     color: "from-amber-500 to-amber-700",
     glow: "hover:shadow-amber-500/20",
+  },
+  {
+    slug: "gmail-whatsapp-security",
+    name: "Gmail & WhatsApp Security",
+    subtitle: "2FA Setup & Monthly Maintenance",
+    headline: "Gmail & WhatsApp Security Setup + Monthly Maintenance | Professional 2FA & Encryption Nigeria",
+    desc: "Lock down your Gmail and WhatsApp with professional 2FA setup, encryption, secure backup, and monthly maintenance packages to prevent future hacks — recurring protection for total peace of mind.",
+    content: "At AI-TECH HAVEN INTERNATIONAL, we provide professional security hardening for your Gmail and WhatsApp accounts. Our experts configure two-factor authentication (2FA), end-to-end encryption, secure backup systems, and recovery options so your accounts stay protected. Monthly maintenance packages ensure your security stays up to date, preventing hacks before they happen. Available remotely across Nigeria and worldwide.",
+    benefits: [
+      "Professional 2FA setup for Gmail and WhatsApp",
+      "End-to-end encryption and secure backup configuration",
+      "Recovery options setup to prevent permanent lockout",
+      "Monthly maintenance packages for ongoing protection",
+      "Security audit and vulnerability assessment",
+      "Remote setup available across Nigeria & worldwide",
+      "Prevent hacks, phishing, and unauthorized access",
+      "Peace of mind with recurring professional protection",
+    ],
+    icon: Lock,
+    color: "from-emerald-500 to-green-700",
+    glow: "hover:shadow-emerald-500/20",
+  },
+  {
+    slug: "safe-organic-growth",
+    name: "Safe Organic Growth + Recovery Backup",
+    subtitle: "Instagram, Facebook & TikTok",
+    headline: "Safe Organic Growth + Recovery Backup | Grow Instagram, Facebook & TikTok Safely Nigeria",
+    desc: "Safe Organic Growth + Recovery Backup packages — grow your Instagram, Facebook and TikTok safely with real engagement while we keep a secure backup of your recovered account.",
+    content: "AI-TECH HAVEN INTERNATIONAL offers unique combined packages that grow your social media presence safely with real, organic engagement while simultaneously maintaining a secure backup of your recovered account. Our team — experts in both account recovery and growth — ensures your accounts are protected as they grow. We use safe, gradual strategies that comply with platform guidelines, minimizing risk while maximizing your reach across Nigeria and worldwide.",
+    benefits: [
+      "Safe, gradual organic follower growth on Instagram, Facebook & TikTok",
+      "Real engagement — likes, comments, shares, and views",
+      "Secure backup of your recovered account maintained monthly",
+      "Platform-compliant growth strategies to protect your account",
+      "Combined recovery + growth packages for maximum value",
+      "Profile optimization and content strategy support",
+      "Performance reports and ongoing optimization",
+      "Available for clients across Nigeria and worldwide",
+    ],
+    icon: BarChart2,
+    color: "from-sky-500 to-blue-700",
+    glow: "hover:shadow-sky-500/20",
   },
 ];

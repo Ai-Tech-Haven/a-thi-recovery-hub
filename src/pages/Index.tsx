@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import RecoveryCTA from "@/components/RecoveryCTA";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CoverageSection from "@/components/CoverageSection";
@@ -98,12 +99,14 @@ const Index = () => (
     />
     <Header />
     <Hero />
+    <RecoveryCTA />
     <Services />
     <WhyChooseUs />
     <CoverageSection />
     <Testimonials />
     <BlogSection />
     <CTASection />
+    <RecoveryCTA />
     <Footer />
     <WhatsAppButton />
   </>
