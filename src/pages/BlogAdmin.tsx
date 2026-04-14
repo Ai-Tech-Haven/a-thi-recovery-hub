@@ -130,13 +130,33 @@ const BlogAdmin = () => {
                   </div>
 
                   <div>
-                    <label className="mb-1 block text-sm font-medium text-foreground">Image URL</label>
+                    <label className="mb-1 block text-sm font-medium text-foreground">Image</label>
                     <input
-                      value={editing.image}
+                      value={editing.image.startsWith("data:") ? "" : editing.image}
                       onChange={(e) => setEditing({ ...editing, image: e.target.value })}
                       className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="https://example.com/image.jpg"
+                      placeholder="https://example.com/image.jpg or upload below"
                     />
+                    <div className="mt-2 flex items-center gap-3">
+                      <label className="cursor-pointer rounded-lg border border-dashed border-border px-4 py-2 text-xs text-muted-foreground hover:border-primary hover:text-primary transition-colors">
+                        Upload Image File
+                        <input
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (!file) return;
+                            const reader = new FileReader();
+                            reader.onload = () => setEditing({ ...editing, image: reader.result as string });
+                            reader.readAsDataURL(file);
+                          }}
+                        />
+                      </label>
+                      {editing.image && (
+                        <img src={editing.image} alt="preview" className="h-10 w-16 rounded object-cover border border-border" />
+                      )}
+                    </div>
                   </div>
 
                   <div>

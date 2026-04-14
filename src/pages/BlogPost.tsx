@@ -1,14 +1,23 @@
 import { useParams, Link } from "react-router-dom";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts as defaultPosts, BlogPost } from "@/data/blogPosts";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
 
+function getActivePosts(): BlogPost[] {
+  try {
+    const saved = localStorage.getItem("athi-blog-posts");
+    return saved ? JSON.parse(saved) : defaultPosts;
+  } catch {
+    return defaultPosts;
+  }
+}
+
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = getActivePosts().find((p) => p.slug === slug);
 
   if (!post) {
     return (
