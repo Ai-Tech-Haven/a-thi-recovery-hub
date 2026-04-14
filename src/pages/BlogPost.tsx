@@ -1,23 +1,15 @@
 import { useParams, Link } from "react-router-dom";
-import { blogPosts as defaultPosts, BlogPost } from "@/data/blogPosts";
+import { blogPosts } from "virtual:blog-posts";
+import { marked } from "marked";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEOHead from "@/components/SEOHead";
 
-function getActivePosts(): BlogPost[] {
-  try {
-    const saved = localStorage.getItem("athi-blog-posts");
-    return saved ? JSON.parse(saved) : defaultPosts;
-  } catch {
-    return defaultPosts;
-  }
-}
-
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = getActivePosts().find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
@@ -44,6 +36,8 @@ const BlogPost = () => {
     publisher: { "@type": "Organization", name: "AI-TECH HAVEN INTERNATIONAL" },
   };
 
+  const htmlContent = marked.parse(post.content) as string;
+
   return (
     <>
       <SEOHead
@@ -60,29 +54,24 @@ const BlogPost = () => {
             <ArrowLeft className="h-4 w-4" /> Back to Blog
           </Link>
 
-          <div className="aspect-video overflow-hidden rounded-xl">
-            <img src={post.image} alt={post.title} className="h-full w-full object-cover" loading="lazy" />
-          </div>
+          {post.image && (
+            <div className="aspect-video overflow-hidden rounded-xl">
+              <img src={post.image} alt={post.title} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+          )}
 
           <div className="mt-6">
-            <p className="text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} · {post.author}</p>
+            <p className="text-sm text-muted-foreground">
+              {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              {post.category && <> · <span className="text-primary">{post.category}</span></>}
+            </p>
             <h1 className="mt-3 font-heading text-2xl font-bold leading-tight text-foreground md:text-3xl">{post.title}</h1>
           </div>
 
-          <div className="prose-custom mt-8 space-y-4 text-muted-foreground">
-            {post.content.split("\n\n").map((block, i) => {
-              if (block.startsWith("## ")) return <h2 key={i} className="font-heading text-xl font-semibold text-foreground mt-8">{block.replace("## ", "")}</h2>;
-              if (block.startsWith("### ")) return <h3 key={i} className="font-heading text-lg font-semibold text-foreground mt-6">{block.replace("### ", "")}</h3>;
-              if (block.startsWith("- ")) return (
-                <ul key={i} className="list-disc space-y-1 pl-6">
-                  {block.split("\n").map((item, j) => (
-                    <li key={j} className="leading-relaxed">{item.replace("- ", "")}</li>
-                  ))}
-                </ul>
-              );
-              return <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: block.replace(/\*\*(.*?)\*\*/g, "<strong class='text-foreground'>$1</strong>") }} />;
-            })}
-          </div>
+          <div
+            className="prose prose-invert mt-8 max-w-none prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground"
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
 
           <div className="mt-12 rounded-xl border border-border bg-card p-6 text-center">
             <h3 className="font-heading text-lg font-semibold text-foreground">Need Help With Account Recovery?</h3>
