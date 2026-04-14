@@ -10,6 +10,7 @@ import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import BlogAdmin from "./pages/BlogAdmin.tsx";
 import Contact from "./pages/Contact.tsx";
+import ServicesPage from "./pages/ServicesPage.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/admin/blog" element={<BlogAdmin />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/:slug" element={<ServicePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
