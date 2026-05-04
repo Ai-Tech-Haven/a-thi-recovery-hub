@@ -1,4 +1,4 @@
-import { Shield, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck, Lock, BarChart2 } from "lucide-react";
+import { Shield, HardDrive, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck, Lock } from "lucide-react";
 
 export const services = [
   {
@@ -19,6 +19,29 @@ export const services = [
     icon: Shield,
     color: "from-red-500 to-red-700",
     glow: "hover:shadow-red-500/20",
+  },
+  {
+    slug: "data-recovery",
+    name: "Data Recovery",
+    subtitle: "HDD, SSD, RAID, Phones & Digital Assets",
+    headline: "Professional Data Recovery Services | HDD, SSD, RAID, Phones & Digital Assets – Nigeria & Worldwide",
+    desc: "We recover lost, deleted, corrupted, or inaccessible data from all storage devices — HDD, SSD, RAID, phones, USB drives and more. Secure, confidential, and professional. Serving Nigeria, Africa & worldwide with on-site options.",
+    content: "At AI-TECH HAVEN INTERNATIONAL, we recover lost, deleted, corrupted, or inaccessible data from all types of storage devices with advanced techniques and strict confidentiality. From Port Harcourt to Lagos, Abuja, across Africa, and clients worldwide, we deliver secure, professional data recovery with a transparent process. For highly confidential or high-value data, we offer on-site recovery — our expert can travel to your location anywhere in the world.",
+    benefits: [
+      "HDD recovery — mechanical failure, clicking drives, bad sectors",
+      "SSD & NVMe — firmware issues, TRIM failures, chip-off recovery",
+      "RAID arrays (0, 1, 5, 10) and NAS server recovery",
+      "External drives, USB flash drives & memory card recovery",
+      "Mobile phones & tablets — Android & iPhone data recovery",
+      "Formatted, deleted, virus/corrupted partition recovery",
+      "Water, fire, or physically damaged drive recovery",
+      "Free diagnostics, no data — no full fee policy",
+      "Strict confidentiality and chain of custody",
+      "On-site recovery available worldwide (client covers travel costs)",
+    ],
+    icon: HardDrive,
+    color: "from-slate-500 to-slate-700",
+    glow: "hover:shadow-slate-500/20",
   },
   {
     slug: "web-apps-development",
@@ -215,26 +238,5 @@ export const services = [
     icon: Lock,
     color: "from-emerald-500 to-green-700",
     glow: "hover:shadow-emerald-500/20",
-  },
-  {
-    slug: "safe-organic-growth",
-    name: "Safe Organic Growth + Recovery Backup",
-    subtitle: "Instagram, Facebook & TikTok",
-    headline: "Safe Organic Growth + Recovery Backup | Grow Instagram, Facebook & TikTok Safely Nigeria",
-    desc: "Safe Organic Growth + Recovery Backup packages — grow your Instagram, Facebook and TikTok safely with real engagement while we keep a secure backup of your recovered account.",
-    content: "AI-TECH HAVEN INTERNATIONAL offers unique combined packages that grow your social media presence safely with real, organic engagement while simultaneously maintaining a secure backup of your recovered account. Our team — experts in both account recovery and growth — ensures your accounts are protected as they grow. We use safe, gradual strategies that comply with platform guidelines, minimizing risk while maximizing your reach across Nigeria and worldwide.",
-    benefits: [
-      "Safe, gradual organic follower growth on Instagram, Facebook & TikTok",
-      "Real engagement — likes, comments, shares, and views",
-      "Secure backup of your recovered account maintained monthly",
-      "Platform-compliant growth strategies to protect your account",
-      "Combined recovery + growth packages for maximum value",
-      "Profile optimization and content strategy support",
-      "Performance reports and ongoing optimization",
-      "Available for clients across Nigeria and worldwide",
-    ],
-    icon: BarChart2,
-    color: "from-sky-500 to-blue-700",
-    glow: "hover:shadow-sky-500/20",
   },
 ];

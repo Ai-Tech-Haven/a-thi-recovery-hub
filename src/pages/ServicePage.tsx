@@ -43,21 +43,28 @@ const ServicePage = () => {
 
   const isGrowth = service.slug === "social-media-growth";
   const isRecovery = service.slug === "accounts-recovery";
+  const isDataRecovery = service.slug === "data-recovery";
   const isAI = service.slug === "ai-bot-development";
 
-  const seoTitle = isGrowth
+  const seoTitle = isDataRecovery
+    ? "Data Recovery Services Nigeria & Worldwide | HDD SSD RAID Phone Recovery | AI-TECH HAVEN INTERNATIONAL"
+    : isGrowth
     ? "Instagram Facebook TikTok Growth Service Nigeria & Worldwide | Real Followers & Engagement | AI-TECH HAVEN INTERNATIONAL"
     : isRecovery
     ? "Instagram, Facebook, Gmail & WhatsApp Account Recovery Nigeria | AI-TECH HAVEN INTERNATIONAL"
     : `${service.headline} | A-THI — Nigeria's Trusted IT Expert`;
 
-  const seoDesc = isGrowth
+  const seoDesc = isDataRecovery
+    ? "Expert data recovery for HDD, SSD, RAID, phones and more. Professional, secure, and confidential recovery services in Nigeria (Port Harcourt, Lagos, Abuja) and worldwide with on-site options."
+    : isGrowth
     ? "Boost your Instagram, Facebook & TikTok with real followers, likes, views and engagement. Safe gradual growth for businesses in Nigeria (Port Harcourt, Lagos, Abuja) and worldwide. Expert team with account recovery backup."
     : isRecovery
     ? "Professional Instagram, Facebook, Gmail, WhatsApp & TikTok account recovery in Nigeria. Fast recovery for disabled, hacked and suspended accounts. Serving Lagos, Abuja, Port Harcourt & worldwide. 50% deposit policy."
     : `${service.content} We provide remote ${service.name.toLowerCase()} services across Nigeria (Lagos, Abuja, Port Harcourt) and globally. Contact A-THI today.`;
 
-  const seoKeywords = isRecovery
+  const seoKeywords = isDataRecovery
+    ? "data recovery Nigeria, HDD recovery Nigeria, SSD recovery Port Harcourt, RAID recovery Nigeria, phone data recovery Lagos, data recovery Abuja, hard drive recovery Nigeria, data recovery expert Nigeria, data recovery worldwide"
+    : isRecovery
     ? "Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp account recovery, hacked account recovery Nigeria, disabled Instagram account, suspended Facebook account, account recovery expert Nigeria"
     : isGrowth
     ? "Instagram growth service Nigeria, real followers Instagram Lagos, TikTok growth Abuja, safe social media growth worldwide, Facebook page growth Nigeria"

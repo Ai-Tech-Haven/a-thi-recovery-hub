@@ -84,6 +84,14 @@ const localBusinessSchema = {
           description: "Fast WhatsApp account recovery for banned, hacked, and inaccessible accounts across Nigeria and worldwide.",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Data Recovery Services Nigeria",
+          description: "Professional HDD, SSD, RAID, phone and digital asset data recovery in Nigeria and worldwide. Secure, confidential, with on-site options.",
+        },
+      },
     ],
   },
 };
@@ -91,10 +99,10 @@ const localBusinessSchema = {
 const Index = () => (
   <>
     <SEOHead
-      title="Account Recovery Expert Nigeria | Instagram, Facebook, Gmail, WhatsApp Recovery | AI-TECH HAVEN INTERNATIONAL"
-      description="Professional account recovery services for Instagram, Facebook, Gmail, WhatsApp, TikTok and all social media. Fast recovery for disabled, hacked and suspended accounts in Port Harcourt, Lagos, Abuja and worldwide. Safe & reliable."
+      title="Account & Data Recovery Expert Nigeria | Instagram, Facebook, Gmail, WhatsApp, HDD, SSD Recovery | AI-TECH HAVEN INTERNATIONAL"
+      description="Professional account recovery and data recovery services. Instagram, Facebook, Gmail, WhatsApp recovery plus HDD, SSD, RAID, phone data recovery. Fast, secure and reliable — Port Harcourt, Lagos, Abuja and worldwide."
       canonical="https://ai-techhaven.site/"
-      keywords="account recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp account recovery, TikTok recovery Nigeria, Instagram recovery Abuja, Facebook recovery Port Harcourt, social media recovery Nigeria, hacked account recovery Nigeria, disabled Instagram account recovery, suspended Facebook account Nigeria, remote account recovery worldwide, IT specialist Port Harcourt"
+      keywords="account recovery Nigeria, data recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp account recovery, HDD recovery Nigeria, SSD recovery Nigeria, RAID recovery Nigeria, phone data recovery Lagos, social media recovery Nigeria, hacked account recovery Nigeria, disabled Instagram account recovery, data recovery expert Nigeria, account and data recovery Nigeria"
       schema={localBusinessSchema}
     />
     <Header />
