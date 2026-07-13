@@ -1,4 +1,4 @@
-import { Shield, HardDrive, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck, Lock } from "lucide-react";
+import { Shield, HardDrive, Tv, Globe, Bot, TrendingUp, Monitor, MapPin, Headphones, Network, Megaphone, UserCheck, Lock } from "lucide-react";
 
 export const services = [
   {
@@ -42,6 +42,28 @@ export const services = [
     icon: HardDrive,
     color: "from-slate-500 to-slate-700",
     glow: "hover:shadow-slate-500/20",
+  },
+  {
+    slug: "smart-living",
+    name: "Smart TV & Smart Living",
+    subtitle: "Installation & Automation",
+    headline: "Smart TV & Smart Living Solutions | Professional Installation – Nigeria & Africa",
+    desc: "Upgrade your home or business with Smart TV configuration, smart lighting, voice automation, smart cameras, and complete intelligent living solutions. Professional installation across Nigeria and Africa.",
+    content: "AI-Tech Haven International delivers premium Smart TV configuration, smart home installation, voice automation, entertainment optimization, and intelligent living solutions for homes, businesses, hotels, and offices across Nigeria and Africa. We supply, configure, install, and support all smart devices end-to-end.",
+    benefits: [
+      "Smart TV configuration for all brands — Samsung, LG, Sony, Hisense, TCL",
+      "Android TV optimization and TV stick setup (ONN, Amazon Fire, Roku)",
+      "Voice automation with Google Assistant and Amazon Alexa",
+      "Smart lighting — ambient, scene-based, and motion-activated",
+      "Smart cameras, speakers, plugs, and full home automation",
+      "Professional installation and ongoing technical support",
+      "Smart packages for homes, hotels, offices, and businesses",
+      "Remote support available 24/7 via WhatsApp",
+    ],
+    icon: Tv,
+    color: "from-yellow-500 to-yellow-700",
+    glow: "hover:shadow-yellow-500/20",
+    customPath: "/smart-living",
   },
   {
     slug: "web-apps-development",

@@ -19,7 +19,7 @@ const Services = () => (
           <div key={s.slug}>
             <ScrollReveal delay={i * 0.08}>
               <Link
-                to={`/services/${s.slug}`}
+                to={(s as any).customPath ?? `/services/${s.slug}`}
                 className={`service-card group relative block overflow-hidden rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl ${s.glow} h-full`}
               >
                 <div

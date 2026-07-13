@@ -62,7 +62,7 @@ const Header = () => {
                   {services.map((s) => (
                     <Link
                       key={s.slug}
-                      to={`/services/${s.slug}`}
+                      to={(s as any).customPath ?? `/services/${s.slug}`}
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-muted hover:text-primary"
                     >
@@ -124,7 +124,7 @@ const Header = () => {
             {servicesOpen && (
               <div className="space-y-1 pl-4">
                 {services.map((s) => (
-                  <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-primary">
+                  <Link key={s.slug} to={(s as any).customPath ?? `/services/${s.slug}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-primary">
                     <s.icon className="h-4 w-4" /> {s.name}
                   </Link>
                 ))}
