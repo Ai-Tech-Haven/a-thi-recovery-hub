@@ -45,6 +45,9 @@ const Header = () => {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
           <a href="#home" onClick={goHome} className="text-sm font-medium text-foreground transition-colors hover:text-primary">Home</a>
+          <Link to="/smart-living" className="text-sm font-semibold text-yellow-500 transition-colors hover:text-yellow-400">
+            Smart Living
+          </Link>
           <div
             className="group relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -111,6 +114,9 @@ const Header = () => {
       {mobileOpen && (
         <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
           <a href="#home" onClick={(e) => { goHome(e); setMobileOpen(false); }} className="block py-3 text-foreground">Home</a>
+          <Link to="/smart-living" onClick={() => setMobileOpen(false)} className="block py-3 text-sm font-semibold text-yellow-500">
+            Smart Living
+          </Link>
           <div>
             <button onClick={() => setServicesOpen(!servicesOpen)} className="flex w-full items-center justify-between py-3 text-foreground">
               Services <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />

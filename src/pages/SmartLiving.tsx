@@ -1,4 +1,5 @@
 ﻿import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Tv, Lightbulb, Speaker, Camera, Plug, Wifi, Settings, Headphones, Star, CheckCircle, ChevronRight, Zap, Shield, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,8 +9,16 @@ import SEOHead from "@/components/SEOHead";
 
 const WA = "https://wa.me/2348088851368?text=Hello%20AI-Tech%20Haven%2C%20I%27m%20interested%20in%20Smart%20Living%20installation";
 
-const serviceSchema = {
+const breadcrumbSchema = {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ai-techhaven.site/" },
+    { "@type": "ListItem", "position": 2, "name": "Smart TV & Smart Living Solutions", "item": "https://ai-techhaven.site/smart-living" }
+  ]
+};
+
+const serviceSchema = {  "@context": "https://schema.org",
   "@type": "Service",
   "name": "Smart TV and Smart Living Solutions",
   "description": "Professional Smart TV configuration, smart home installation, voice automation, entertainment optimization and intelligent living solutions in Nigeria and worldwide.",
@@ -135,15 +144,80 @@ const SmartLiving = () => (
       keywords="smart TV installation Nigeria, smart home Nigeria, voice automation Nigeria, smart lighting Port Harcourt, smart home Lagos, smart TV setup Nigeria, smart living solutions Nigeria, AI smart home Africa"
       schema={serviceSchema}
     />
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+    </Helmet>
     <Header />
     <main className="overflow-x-hidden pt-16">
 
       {/* ===== HERO ===== */}
       <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black" />
+        {/* Layered background: photo-quality room scene via CSS + SVG illustration */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-black" />
+        {/* Room scene illustration */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-30">
+          {/* Floor */}
+          <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-800/60 to-transparent" />
+          {/* Back wall */}
+          <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-slate-900/40 to-transparent" />
+          {/* Large Smart TV on wall */}
+          <div className="absolute left-1/2 top-[15%] -translate-x-1/2 w-[55%] max-w-[600px]">
+            <div className="relative rounded-lg border-4 border-slate-700 bg-slate-950 shadow-2xl shadow-blue-500/20">
+              {/* TV screen glow */}
+              <div className="aspect-video w-full overflow-hidden rounded bg-gradient-to-br from-blue-900/80 via-slate-800/90 to-blue-950/80 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-cyan-600/10" />
+                <div className="text-center opacity-80">
+                  <div className="mx-auto mb-2 h-8 w-8 rounded bg-blue-400/30 flex items-center justify-center">
+                    <span className="text-blue-300 text-xs font-bold">4K</span>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="h-1.5 w-24 rounded bg-white/20 mx-auto" />
+                    <div className="h-1.5 w-16 rounded bg-white/10 mx-auto" />
+                  </div>
+                </div>
+              </div>
+              {/* TV stand */}
+              <div className="mx-auto mt-1 h-3 w-12 rounded-b bg-slate-700" />
+              <div className="mx-auto h-1 w-20 rounded bg-slate-700" />
+            </div>
+          </div>
+          {/* Ambient light strips - left wall */}
+          <div className="absolute left-[15%] top-[10%] h-[50%] w-1.5 rounded-full bg-gradient-to-b from-yellow-400/60 via-yellow-300/30 to-transparent blur-sm" />
+          <div className="absolute left-[14.5%] top-[10%] h-[50%] w-4 rounded-full bg-yellow-400/10 blur-md" />
+          {/* Ambient light strips - right wall */}
+          <div className="absolute right-[15%] top-[10%] h-[50%] w-1.5 rounded-full bg-gradient-to-b from-yellow-400/60 via-yellow-300/30 to-transparent blur-sm" />
+          <div className="absolute right-[14.5%] top-[10%] h-[50%] w-4 rounded-full bg-yellow-400/10 blur-md" />
+          {/* Smart speaker - left of TV */}
+          <div className="absolute left-[22%] bottom-[30%] w-8 h-14 rounded-xl border border-slate-600 bg-slate-800 flex flex-col items-center justify-center gap-1 shadow-lg">
+            <div className="h-1 w-5 rounded bg-slate-500" />
+            <div className="h-1 w-4 rounded bg-slate-500" />
+            <div className="h-1 w-5 rounded bg-slate-500" />
+            <div className="mt-1 h-2 w-2 rounded-full bg-yellow-400/60" />
+          </div>
+          {/* Smart camera - top right corner */}
+          <div className="absolute right-[18%] top-[8%] w-7 h-5 rounded bg-slate-700 flex items-center justify-center shadow-md">
+            <div className="h-3 w-3 rounded-full border-2 border-slate-500 bg-slate-900 flex items-center justify-center">
+              <div className="h-1.5 w-1.5 rounded-full bg-blue-400/80" />
+            </div>
+          </div>
+          {/* Smart plug icon - bottom right */}
+          <div className="absolute right-[20%] bottom-[28%] w-7 h-9 rounded border border-slate-600 bg-slate-800 flex flex-col items-center justify-center gap-0.5 shadow">
+            <div className="h-3 w-0.5 rounded bg-slate-400" />
+            <div className="h-1.5 w-4 rounded-full border border-slate-500" />
+            <div className="h-1 w-1 rounded-full bg-green-400/70" />
+          </div>
+          {/* Sofa silhouette */}
+          <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[60%] max-w-[500px]">
+            <div className="h-12 rounded-t-2xl bg-gradient-to-b from-slate-700/80 to-slate-800/60" />
+            <div className="h-6 rounded-b bg-slate-800/80" />
+          </div>
+          {/* Ceiling light glow */}
+          <div className="pointer-events-none absolute left-1/2 top-0 h-40 w-96 -translate-x-1/2 rounded-full bg-yellow-400/5 blur-3xl" />
+        </div>
+        {/* Gold + blue accent orbs */}
         <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-yellow-400/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/5 blur-3xl" />
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
           <ScrollReveal>
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-yellow-400">
