@@ -14,6 +14,7 @@ import ServicesPage from "./pages/ServicesPage.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
 import SmartLiving from "./pages/SmartLiving.tsx";
 import TechnologyConsulting from "./pages/TechnologyConsulting.tsx";
+import Networking from "./pages/Networking.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/services/:slug" element={<ServicePage />} />
               <Route path="/smart-living" element={<SmartLiving />} />
               <Route path="/services/technology-consulting" element={<TechnologyConsulting />} />
+              <Route path="/services/networking-infrastructure" element={<Networking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
