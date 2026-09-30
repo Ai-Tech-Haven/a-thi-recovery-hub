@@ -6,12 +6,14 @@ interface SEOHeadProps {
   canonical?: string;
   type?: string;
   image?: string;
-  schema?: object;
+  /** Accept a single schema object or an array of schema objects */
+  schema?: object | object[];
   keywords?: string;
 }
 
 const DEFAULT_IMAGE = "https://ai-techhaven.site/favicon.png";
-const DEFAULT_KEYWORDS = "account recovery Nigeria, Instagram account recovery Nigeria, Facebook account recovery Lagos, Gmail recovery Nigeria, WhatsApp recovery, social media recovery Nigeria, hacked account recovery, disabled account recovery, IT specialist Port Harcourt";
+const DEFAULT_KEYWORDS =
+  "intelligent technology solutions Nigeria, account recovery Nigeria, data recovery Nigeria, smart living Nigeria, smart home Nigeria, IT support Nigeria, web development Nigeria, computer repair Nigeria, technology consulting Nigeria, AI solutions Nigeria";
 
 const SEOHead = ({
   title,
@@ -21,37 +23,49 @@ const SEOHead = ({
   image = DEFAULT_IMAGE,
   schema,
   keywords = DEFAULT_KEYWORDS,
-}: SEOHeadProps) => (
-  <Helmet>
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow" />
+}: SEOHeadProps) => {
+  // Normalise schema to always be an array for consistent rendering
+  const schemas: object[] = schema
+    ? Array.isArray(schema)
+      ? schema
+      : [schema]
+    : [];
 
-    {/* Open Graph */}
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content={type} />
-    <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content="AI-TECH HAVEN INTERNATIONAL - Account Recovery Expert Nigeria" />
-    <meta property="og:site_name" content="AI-TECH HAVEN INTERNATIONAL" />
-    <meta property="og:locale" content="en_NG" />
-    {canonical && <meta property="og:url" content={canonical} />}
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
 
-    {/* Twitter Card */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@A_THIonline" />
-    <meta name="twitter:creator" content="@A_THIonline" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content="AI-Tech Haven International — Intelligent Technology Solutions Company Nigeria" />
+      <meta property="og:site_name" content="AI-Tech Haven International" />
+      <meta property="og:locale" content="en_NG" />
+      {canonical && <meta property="og:url" content={canonical} />}
 
-    {canonical && <link rel="canonical" href={canonical} />}
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@A_THIonline" />
+      <meta name="twitter:creator" content="@A_THIonline" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
 
-    {schema && (
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-    )}
-  </Helmet>
-);
+      {canonical && <link rel="canonical" href={canonical} />}
+
+      {/* Render each schema block as its own JSON-LD script */}
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(s)}
+        </script>
+      ))}
+    </Helmet>
+  );
+};
 
 export default SEOHead;
