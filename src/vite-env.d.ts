@@ -9,6 +9,14 @@ declare module "virtual:blog-posts" {
     category: string;
     excerpt: string;
     image: string;
+    /** Alt text for the cover image — used in <img> and OG image:alt */
+    imageAlt: string;
+    /** Author name displayed on the post and in Article schema */
+    author: string;
+    /** Comma-separated keyword string for <meta name="keywords"> */
+    keywords: string;
+    /** Array of tag strings for filtering and display */
+    tags: string[];
     content: string;
   }
   export const blogPosts: BlogPostMd[];

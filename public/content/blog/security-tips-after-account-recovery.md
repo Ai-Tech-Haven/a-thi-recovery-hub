@@ -2,8 +2,16 @@
 title: "7 Security Tips to Protect Your Account After Recovery"
 date: "2026-03-01"
 category: "Security Tips"
+author: "AI-Tech Haven International"
 excerpt: "Once your account is successfully recovered, it's crucial to lock it down. Follow these 7 essential security steps to ensure you never lose access again."
 image: "/assets/blog-security-tips.jpg"
+imageAlt: "Person setting up two-factor authentication on a smartphone for account security"
+keywords: "account security tips Nigeria, protect Instagram account after recovery, two-factor authentication setup, secure social media account Nigeria, A-THI account security"
+tags:
+  - Security Tips
+  - Two-Factor Authentication
+  - Account Protection
+  - Instagram
 ---
 
 ## Securing Your Account After Recovery

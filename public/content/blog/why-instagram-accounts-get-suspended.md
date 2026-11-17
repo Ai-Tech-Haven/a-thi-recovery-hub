@@ -2,8 +2,16 @@
 title: "Why Instagram Accounts Get Suspended and How to Prevent It"
 date: "2026-03-08"
 category: "Security Tips"
+author: "AI-Tech Haven International"
 excerpt: "Understand the common triggers that cause Instagram's automated systems to suspend accounts, and learn the best practices to keep your profile safe."
 image: "/assets/blog-instagram-suspended.jpg"
+imageAlt: "Instagram app on a phone screen showing a suspended account warning"
+keywords: "Instagram account suspended Nigeria, why Instagram suspends accounts, Instagram suspension fix, Instagram security tips, recover suspended Instagram account Nigeria"
+tags:
+  - Instagram
+  - Security Tips
+  - Account Suspension
+  - Nigeria
 ---
 
 ## Understanding Instagram Suspensions

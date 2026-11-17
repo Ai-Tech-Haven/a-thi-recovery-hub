@@ -5,8 +5,8 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/assets"
+public_folder: "/assets"
 
 collections:
   - name: "blog"
@@ -15,9 +15,82 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Category", name: "category", widget: "string", default: "Account Recovery" }
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Cover Image", name: "image", widget: "image", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
+      # ── Core metadata ──────────────────────────────────────────────────────
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Clear, descriptive headline. Include the main keyword naturally. 50–70 characters ideal."
+
+      - label: "Publication Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        hint: "Date the article was published or last significantly updated."
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Account Recovery"
+          - "Data Recovery"
+          - "Smart Living"
+          - "Computer Repair & IT Support"
+          - "AI & Automation"
+          - "Networking"
+          - "Security Tips"
+          - "Business Technology"
+          - "Technology Tips"
+          - "AI Trends"
+        default: "Account Recovery"
+        hint: "Choose the category that best fits the article topic."
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        default: []
+        hint: "Optional comma-separated tags for filtering, e.g. Instagram, Nigeria, 2FA. Keep to 3–5 per article."
+
+      - label: "Excerpt / Meta Description"
+        name: "excerpt"
+        widget: "text"
+        hint: "1–2 sentence summary used in search results, social previews, and the blog listing. 120–160 characters ideal."
+
+      # ── Author ─────────────────────────────────────────────────────────────
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "AI-Tech Haven International"
+        hint: "Name displayed on the article and in search engine structured data."
+
+      # ── Cover image ────────────────────────────────────────────────────────
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Main article image shown at the top of the post and in social share previews. Recommended: 1200×630 px JPG."
+
+      - label: "Cover Image Alt Text"
+        name: "imageAlt"
+        widget: "string"
+        required: false
+        hint: "Describe the image for screen readers and search engines, e.g. 'Person recovering Instagram account on a phone'. Keep under 125 characters."
+
+      # ── SEO keywords ───────────────────────────────────────────────────────
+      - label: "Keywords"
+        name: "keywords"
+        widget: "string"
+        required: false
+        hint: "Comma-separated keywords for this article, e.g. 'Instagram account recovery Nigeria, disabled Instagram account'. 5–10 natural phrases."
+
+      # ── Article body ───────────────────────────────────────────────────────
+      - label: "Content"
+        name: "body"
+        widget: "markdown"
+        hint: >
+          Write in clear sections using ## for main headings and ### for sub-headings.
+          Start with a brief intro paragraph, then cover the topic in logical steps.
+          Link to relevant AI-Tech Haven service pages where appropriate.
+          End with a clear call to action.

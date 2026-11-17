@@ -2,8 +2,16 @@
 title: "How to Recover a Disabled Instagram Account After Wrong ID"
 date: "2026-03-15"
 category: "Account Recovery"
+author: "AI-Tech Haven International"
 excerpt: "Learn the exact steps to take when your Instagram account gets disabled and you've submitted the wrong ID. Recovery is still possible if you follow these guidelines."
 image: "/assets/blog-instagram-recovery.jpg"
+imageAlt: "Person using a smartphone to recover a disabled Instagram account"
+keywords: "Instagram account recovery Nigeria, disabled Instagram account wrong ID, recover Instagram after wrong ID, Instagram account disabled fix, A-THI account recovery"
+tags:
+  - Instagram
+  - Account Recovery
+  - Nigeria
+  - Social Media
 ---
 
 ## Why Instagram Disables Accounts After Wrong ID

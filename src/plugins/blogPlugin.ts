@@ -29,6 +29,11 @@ function loadPosts(blogDir: string) {
         category: data.category ?? "",
         excerpt: data.excerpt ?? "",
         image: data.image ?? "",
+        // New SEO / discoverability fields
+        imageAlt: data.imageAlt ?? data.title ?? "",
+        author: data.author ?? "AI-Tech Haven International",
+        keywords: data.keywords ?? "",
+        tags: Array.isArray(data.tags) ? data.tags : [],
         content,
       };
     })
@@ -52,7 +57,7 @@ export function blogPlugin(): Plugin {
       return `export const blogPosts = ${JSON.stringify(posts)};`;
     },
     configureServer(server) {
-      // Hot-reload when any .md file changes
+      // Hot-reload when any .md file changes or is added
       server.watcher.add(blogDir);
       server.watcher.on("change", (file) => {
         if (file.includes("content/blog") && file.endsWith(".md")) {
